@@ -1,0 +1,301 @@
+        /* Genel stil tanımlamaları buraya gelecek */
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #1E1E1E;
+            color: #BDBDBD;
+        }
+
+        header {
+            background-color: #1E1E1E;
+            color: #c191ff;
+            padding: 2rem;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            position: relative;
+            min-height: 100px; /* Same as photo height */
+            padding-left: 2rem;
+           
+        }
+
+        .class-name {
+            color: #C191FF; /* İsim rengi */
+            margin-top: -5px; /* Adjusted to align with photo center */
+            padding-left: 0px; /* Moved 20px closer to the left */
+            font-size: 1.5rem;
+        }
+
+        .section-title {
+            color: #39CC9B; /* Bölüm başlıkları rengi */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            padding-left: 0;
+        }
+
+        main {
+            background-color: #1E1E1E;
+            max-width: 100%;
+            margin: 0;
+            padding: 0 1.5rem; /* 1rem ve 2rem'in ortası */
+            position: relative;
+        }
+
+        main::before {
+            content: '';
+            position: absolute;
+            left: 4rem; /* 2rem ve 4rem'in ortası */
+            top: -2rem;
+            bottom: 0;
+            width: 0.1px;
+            background-color: #BDBDBD;
+            z-index: 0;
+        }
+
+        /* Move all content above the line */
+        section, footer {
+            position: relative;
+            z-index: 1;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            padding: 0;
+            margin-left: 6rem; /* 4rem ve 8rem'in ortası */
+        }
+        section::before {
+            content: '';
+            position: absolute;
+            left: 0rem; /* 2rem ve 4rem'in ortası */
+            top: 3rem;
+            bottom: 3rem;
+            width: 0.1px;
+            background-color: #BDBDBD;
+            z-index: 0;
+        }
+
+        p, li {
+            color: #BDBDBD;
+            margin: 0.5rem 0;
+            padding-left: 2rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0rem;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            padding-left: 0.5rem;
+        }
+
+        strong {
+            color: #569CD6; /* Rider'ın anahtar kelime rengi */
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+      
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #1E1E1E;
+            color: #BDBDBD;
+        }
+
+        footer .closing-brace {
+            margin-left: 3rem; /* 2rem ve 4rem'in ortası */
+            padding-left: 0;
+            text-align: left;
+        }
+
+        /* İleride navigasyon menüsü için stiller eklenebilir */
+        nav {
+            /* ... */
+        }
+
+        /* Profil Fotoğrafı Stilleri */
+        .profil-foto {
+            display: block;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Contact Section Styles */
+        .contact-section {
+            text-align: left;
+            padding: 0;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+        }
+
+        .contact-info a {
+            color: #9CDCFE; /* Rider'ın değişken rengi */
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #CE9178; /* Rider'ın string rengi */
+        }
+
+        .cv-download {
+            margin-top: 2rem;
+            padding-left: 1rem;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #1E1E1E;
+            color: #9CDCFE;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: 1px solid #3c3c3c;
+        }
+
+        .download-btn:hover {
+            background-color: #2D2D2D;
+            color: #CE9178;
+        }
+
+        /* Photo popup styles */
+        .photo-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .photo-popup img {
+            max-width: 80%;
+            max-height: 80%;
+            margin-top: 5%;
+            border-radius: 5px;
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #ff6b6b;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* Header layout adjustments */
+        header {
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+            background-color: #1E1E1E;
+            position: relative;
+            min-height: 100px; /* Same as photo height */
+        }
+
+        .header-hover-area {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            position: relative;
+        }
+
+        .header-content {
+            flex: 1;
+            text-align: left;
+            transition: margin-left 0.3s ease;
+            padding-left: 2rem;
+        }
+
+        .profil-foto {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            left: -15px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            object-fit: cover;
+        }
+
+        /* When photo is visible */
+        header.photo-visible .header-content {
+            margin-left: 75px;
+        }
+
+        header.photo-visible .profil-foto {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Global styles for text elements */
+        h1, h2, p, li, a {
+            cursor: default;
+        }
+
+        .function-content {
+            margin-left: 6rem; /* 4rem ve 8rem'in ortası */
+            padding-left: 0;
+        }
+
+        .function-content ul li p {
+            margin-left: 1rem;
+        }
+
+        .function-content ul li .closing-brace {
+            display: block;
+        }
+
+        .closing-brace {
+            margin-left: 0rem;
+            padding-left: 0;
+            text-align: left;
+        }
+
+        /* Parenthesis styles */
+        .parenthesis {
+            color: #BDBDBD; /* Açık gri renk */
+        }
+
+        .job-title {
+            color: #9CDCFE; /* Rider'ın değişken rengi */
+        }
+
+        .job-param {
+            color: #6C95EB; /* Görev rengi */
+        }
+
+        .job-value {
+            color: #BDBDBD; /* Yazılım geliştirici rengi */
+        }
+
+        .copyright {
+            color: #6A9955; /* Rider'ın yorum rengi */
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .function-content.active + .closing-brace {
+            opacity: 1;
+        }
